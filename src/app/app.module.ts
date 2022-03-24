@@ -18,7 +18,6 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
-import { PacoteComponent } from './pacotes/pacote/pacote.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { PacoteComponent } from './pacotes/pacote/pacote.component';
     FooterComponent,
     SobreComponent,
     ContatoComponent,
-    ListaProdutoComponent,
-    PacoteComponent
+    ListaProdutoComponent
   ],
   imports: [
     BrowserModule,

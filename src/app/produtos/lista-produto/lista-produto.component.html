@@ -1,35 +1,73 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
 <div class="container main-container">
 
-    <div class="row text-center">
+    <div class="row text-center main-container">
         
-        <div *ngFor="let produto of produtos" class="col-md-4" style="padding-bottom: 30px;">
+        <div class="card-produto">
             <div class="card h-100">
-                <a class="text-decoration-none" [routerLink]="['/produto-detalhe', produto.id]">
-                    <div style="align-content:center;">
-                        <img src="/assets/{{ produto.imagem }}" height="164px" width="253px" alt="">
+                <a class="text-decoration-none" [routerLink]="">
+                    <div>
+                        <img src="https://www.objective.com.br/wp-content/uploads/2020/12/testes-automatizados.png" height="164px" width="253px" alt="">
                     </div>
                 </a>
-                <h4 class="card-title">{{ produto.nome | titlecase }}</h4>
-
-                <div [ngSwitch]="produto.promocao">
-                    <p *ngSwitchCase="true">Promoção!</p>
-                    <p *ngSwitchCase="false">Por apenas:</p>
-                </div>
-
-                <div *ngIf="produto.promocao" class="card-body">
-                    <div><h4 class="card-text">De:
-                        <small><del>{{ produto.valor | currency:'BRL':true:'1.2-2':'pt' }}</del></small>
-                        Por: {{ produto.valorPromo | currency:'BRL':true:'1.2-2':'pt' }}
-                    </h4></div>
-                </div>
-
-                <div *ngIf="!produto.promocao" class="card-body">
-                    <div><h4>{{ produto.valor | currency:'BRL':true:'1.2-2':'pt' }}</h4></div>
-                </div>
-
+                <h4 class="card-title">Testes Automatizados e Qualidade de Software</h4>
+                <p class="text-center">
+                    Estudos apontam que quando um bug é corrigido no momento em que foi detectado, ou no mesmo dia, levamos 24 vezes menos tempo do que se fosse corrigido
+                    três semanas depois, por exemplo. Para isso a automação de testes pode ser sua aliada, melhorando a eficiência da operação e minimizando o risco de bugs.
+                    Adote esta prática em um processo de melhoria contínua, com passos bem definidos e incrementais, com a atuação dos especialistas da Objective. 
+                    Utilizando o Objective Test Flow, nosso time apoia na resolução de pontos críticos desta adoção possibilitando uma gestão de mudança cultural bem controlada.
+                </p>
                 <div class="card-footer">
-                    <a class="btn btn-primary" [routerLink]="['/carrinho',produto.id]">
-                        <span class="fa fa-shopping-cart"></span> Comprar
+                    <a class="btn btn-primary" [routerLink]="">
+                        <span class="fa fa-info"></span> Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="card h-100">
+                <a class="text-decoration-none" [routerLink]="">
+                    <div>
+                        <img src="https://www.objective.com.br/wp-content/uploads/2021/11/devops-transparente.png" height="164px" width="253px" alt="">
+                    </div>
+                </a>
+                <h4 class="card-title">Consultoria DevOps<br><span style="color:aliceblue">.</span></h4>
+                <p class="text-center">
+            
+                    Traga agilidade para as entregas na área de TI, reduzindo os gaps entre desenvolvimento e operações.
+                    Conte com uma consultoria que é referência e percursora na cultura de desenvolvimento ágil através do conceito de DevOps,
+                     com testes automatizados, qualidade, CI/CD (continuous integration e continuous delivery).
+                    Nossos consultores são especialistas para realizar o assessment da sua equipe ou apoiar na disseminação da cultura DevOps,
+                     com consultoria, treinamento, implantação de ferramentas adequadas para o seu contexto e serviços gerenciados.
+
+                </p>
+                <div class="card-footer">
+                    <a class="btn btn-primary" [routerLink]="">
+                        <span class="fa fa-info"></span> Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-produto">
+            <div class="card h-100">
+                <a class="text-decoration-none" [routerLink]="">
+                    <div>
+                        <img src="https://www.objective.com.br/wp-content/uploads/2020/12/design-thinking-1.png" height="164px" width="253px" alt="">
+                    </div>
+                </a>
+                <h4 class="card-title">Consultoria em Design para produtos e serviços</h4>
+                <p>
+                    Traga agilidade para as entregas na área de TI, reduzindo os gaps entre desenvolvimento e operações.
+                    Conte com uma consultoria que é referência e percursora na cultura de desenvolvimento ágil através do
+                     conceito de DevOps, com testes automatizados, qualidade, CI/CD (continuous integration e continuous delivery).
+                </p>
+                <div class="card-footer ">
+                    <a class="btn btn-primary" [routerLink]="">
+                        <span class="fa fa-info"></span> Saiba Mais
                     </a>
                 </div>
             </div>
