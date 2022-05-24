@@ -141,7 +141,42 @@ main.cards section.card.red{
     text-align: center;
 }
 .img-6{
-    width:100%;
+    width:auto;
     height: 300px;
     align-items: center;
+}
+
+.orcamento{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
+}
+.text{
+    margin-top: 30px;
+    text-align: justify;
+
+}
+
+.p{
+    text-align: justify;
+    margin: 50px;
+}
+
+.text{
+    text-align: justify;
+    margin-left: 5%;
+}
+
+.title{
+    color: darkgrey;
+    text-align: center;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid grey;
 }
