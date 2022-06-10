@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy } from '@angular/common';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -42,8 +43,7 @@ import { TestesComponent } from './produtos/testes/testes.component';
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
   providers: [
-    ProdutoService,
-    {provide: APP_BASE_HREF, useValue: '/'}
+    ProdutoService
   ],
   bootstrap: [AppComponent]
 })
