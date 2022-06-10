@@ -17,5 +17,6 @@ export const rootRouterConfig: Routes = [
     {path: 'devops', component: DevopsComponent},
     {path: 'testes', component: TestesComponent},
     {path: 'design', component: DesignComponent},
+    { path: '**', redirectTo: 'home' }
 
 ];
